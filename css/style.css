@@ -1,0 +1,338 @@
+@font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    font-size:16px;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* nav */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 51px;
+    background: rgba(17, 17, 17, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+h1 {
+    margin-top: 5px;
+    margin-right: auto;
+}
+
+h1 > .logo{
+    width: 23%;
+}
+
+nav > a {
+    margin-left:2em;
+    color:#eaeaea;
+}
+
+/* section All*/
+
+.point_color1{
+    color: #ff91a4;
+}
+
+.point_color2{
+    color: #fff;
+}
+
+.font_bold{
+    font-weight: 700;
+}
+
+.font_point{
+    font-size:1.4rem;
+}
+
+section > article{
+    max-width: 1200px;
+    position: relative;
+    padding:100px 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.title{
+    text-align: center;
+    color:#302e2e;
+}
+
+.title > h2 {
+    font-family: 'EliceDigitalBaeum_Bold';
+    font-size:3.5rem;
+    line-height: 1.3;
+    margin-top:3rem;
+}
+
+.title > p {
+    font-size:1.5rem;
+    margin-top:0.5rem;
+}
+
+/* sec1 */
+.sec1{
+    border-bottom:1px solid rgb(245, 245, 245);
+}
+
+.main_img {
+    display:flex;
+    justify-content: space-around;
+    margin-top:5em;
+}
+
+.move_circle{
+    width:20%;
+    height: 20%;
+    animation: moving 1.5s ease-in 0s infinite alternate; 
+}
+
+.move_circle2{
+    width:20%;
+    height: 20%;
+    animation: moving2 2s ease-in 0s infinite alternate; 
+}
+
+@keyframes moving {
+    from {
+      margin-top: 0;
+    }
+  
+    to {
+      margin-top: 3rem;
+    }
+  }
+
+  @keyframes moving2 {
+    from {
+        margin-top: -4rem;
+      }
+    
+      to {
+        margin-top: 0;
+      }
+  }
+
+/***********************/
+
+/* sec2 */
+
+.sec2 {
+    background:#1d1d1d;
+}
+
+
+.sec2_title {
+    margin-bottom:1.5em;
+    font-family: 'EliceDigitalBaeum_Bold';
+    text-align: center;
+    font-size:3.5rem;
+    line-height: 1.5;
+    color:white;
+    text-shadow: 4px 4px 1px#555555;
+}
+
+.sec2 > article > .content > .sub_cons{
+    display: flex;
+    margin-top:2em;
+    font-size:1.2rem;
+    color:#9a9a9a;;
+}
+
+.sec2 > article > .content > .sub_cons > .txt{
+    width:45%;
+    word-break: keep-all;
+}
+
+.sec2 > article > .content > .sub_cons > .img{
+    margin-left:15%;
+    animation: vibration 0.3s ease-in 0s infinite alternate;
+    
+}
+
+@keyframes vibration {
+    from {
+        margin-left: 15%;
+        
+      }
+    
+      to {
+        margin-left: 18%;
+      }
+  }
+
+
+.sec2 > article > .content > .sub_cons > .txt > p:not(:last-child) {
+    margin-bottom:1.3rem;
+}
+
+.five_cons{
+    margin-top:5em;
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.five_box{
+    width:18%;
+}
+
+.five_box > strong{
+    padding-bottom:0.5rem;
+    font-weight: 500;
+    font-size:1.5rem;
+    color:rgb(255, 255, 255);
+    border-bottom:2px solid rgb(255, 255, 255);
+}
+
+.five_box > p {
+    margin-top:2rem;
+    color: #eaeaea;
+    font-size: 0.9rem;
+}
+
+/***********************/
+
+
+/* sec3 */
+
+.title2{
+    text-align: center;
+}
+
+.title2 > h2 {
+    font-family: 'EliceDigitalBaeum_Bold';
+    font-size:3.5rem;
+    line-height: 1.3;
+    margin-bottom:1.5em;
+}
+
+.arrow {
+    font-size:20px;
+    font-family: 'CookieRun-Regular';
+    display: flex;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    color:white;
+    background:#ddd;
+    border-radius: 10%;
+    padding:3px 6px;
+}
+
+.next {
+    margin-left:0.5rem;
+}
+
+.showing {
+    z-index: 10 !important;
+    opacity: 1 !important;
+}   
+
+.slide_box{
+    width:100%;
+    height: 400px;
+    position: relative;
+}
+
+.slide {
+    width:100%;
+    height: auto;
+    position: absolute;
+    top:0;
+    left: 0;
+    overflow: hidden;
+    background:white;
+    z-index: 0;
+    opacity:0;
+    transition: opacity .5s ease-in-out;
+}
+
+.slide_cons{
+    display:flex;
+    margin:0 auto;
+}
+
+.slide_txt {
+    width:60%;
+
+}
+
+.slide_txt > h3{ 
+    font-size:2rem;
+    font-weight: 700;
+    margin:2rem 0;
+}
+
+.slide_img {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.slide_img > img {
+    width:80%;
+}
+/***********************/
+
+footer {
+    background:#f5f5f7;
+    color:#86868b;
+    font-size:0.75rem;
+    padding:20px 0;
+}
+
+address {
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+.frist_info {
+    padding:5px 0;
+    color:#86868b;
+    font-size:0.8rem;
+    border-bottom:1px solid #ddd;
+    margin-bottom:5px;
+}
+
+address > p > a {
+    color:#515154;
+}
+
+address > p > a:hover{
+    color: #1d1d1f;
+    text-decoration: underline;
+}
